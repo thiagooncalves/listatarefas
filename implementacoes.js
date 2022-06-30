@@ -8,7 +8,6 @@ let tarefaCorrente = null
 // diferente é somente símbolo de exclamação e igual+igual juntos(!==) diferente no valor e tipo
 // verifica se o valor e o tipo dos dados são iguais (===) e (==) só checa se os valores são iguais
 
-
 formulario.addEventListener("submit" , e => {
     e.preventDefault()
     tarefaCorrente || tarefaCorrente === 0 ?

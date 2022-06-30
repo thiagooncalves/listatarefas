@@ -18,12 +18,12 @@
             </form>
             <h4>Minhas tarefas</h4>
             <label for="filtrar-tabela">Filtre:</label>
-            <input type="text" name="filtro" id="filtrar-tabela" placeholder="Digite o nome da tarefa">
+            <input type="text" name="filtro" id="filtro-tabela" onkeyup="Filtrar();" placeholder="Digite o nome da tarefa">
                 <div class="div__tabela">
-                    <table>
+                    <table id="tabela-dados">
                         <thead>
                             <tr>
-                                <th>Tarefa</th>
+                                <th class="tarefa">Tarefa</th>
                                 <th>Descrição</th>
                                 <th class="th__empty">Configurações</th>
                             </tr>
