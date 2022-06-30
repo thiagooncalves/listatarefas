@@ -1,0 +1,103 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+table {
+	width: 50rem;
+    margin: 20px 0 40px;
+    
+}
+
+.div__tabela {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.div__btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 13rem;
+    gap: .17rem;
+}
+
+.coluna__btn {
+  display: flex;
+  justify-content: flex-start;
+  gap: .2rem;
+  width: 6.5rem;
+  margin-top: -.2rem;
+}
+
+thead {
+	background: #555555;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+td {
+	width: 20rem;
+    height: 2rem;
+    border: .1rem solid #000000;
+    text-align: end;
+}
+
+.td__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+    height: 2rem;
+    gap: .3rem;
+}
+
+th {
+    width: 15rem;
+    height: 1.5rem;
+    border: .1rem solid #000000;
+}
+
+.th__empty {
+    width: 1rem;
+}
+
+.input__padrao {
+    font-family: 'Montserrat', sans-serif;
+    margin-top: .3rem ;
+    width: 15rem;
+    height: 1.5rem;
+    font-size: .8rem;
+}
+
+.enviar {
+    font-family: 'Montserrat', sans-serif;
+    margin-left: -.5rem;
+    width: 7rem;
+    height: 1.9rem;
+    background-color: #555555;
+    color: #FFFFFF;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn__edit {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #2dc032;
+    color: #FFFFFF;
+    cursor: pointer;
+    height: 1.8rem;
+}
+
+.btn__del {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f3080c;
+    color: #FFFFFF;
+    cursor: pointer;
+    height: 1.8rem;
+}
+
+#filtrar-tabela {
+    font-family: 'Montserrat', sans-serif;
+    width: 15rem;
+    height: 1.5rem;
+}

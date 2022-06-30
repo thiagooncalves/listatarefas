@@ -1,0 +1,39 @@
+        <!DOCTYPE html>
+        <html lang="pt-br">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="style.css">
+            <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+            <title>HTML+CSS+JS</title>
+        </head>
+        <body>
+            <div class="container__principal">
+            <form class="form__principal" id="form-principal">
+                <label for="criartarefa">Criar tarefa</label>
+                <input type="text" class="input__padrao" placeholder="Título" name="titulo" id="titulo">
+                <input type="text" class="input__padrao" placeholder="Descrição" name="descricao" id="descricao">
+                <input type="submit" value="Adicionar" class="enviar">
+            </form>
+            <h4>Minhas tarefas</h4>
+            <label for="filtrar-tabela">Filtre:</label>
+            <input type="text" name="filtro" id="filtrar-tabela" placeholder="Digite o nome da tarefa">
+                <div class="div__tabela">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tarefa</th>
+                                <th>Descrição</th>
+                                <th class="th__empty">Configurações</th>
+                            </tr>
+                        </thead>
+                            <tbody id="table_body">
+                                
+                            </tbody>
+                    </table>
+                </div>
+                <script src="implementacoes.js"></script>
+                <script src="filtro.js"></script>
+            </body>
+        </html>
