@@ -8,7 +8,7 @@ function Filtrar() {
   for (i = 0; i < tr.length; i++) {
     tdCol1 = tr[i].getElementsByTagName("td")[0];
     tdCol2 = tr[i].getElementsByTagName("td")[1];
-    if (tdCol1 || tdCol1) {
+    if (tdCol1) {
       if (tdCol1.innerHTML.toUpperCase().indexOf(filter) > -1 || tdCol2.innerHTML.toUpperCase().indexOf(filter) > -1) {
         tr[i].style.display = "";
       } else {
