@@ -2,6 +2,9 @@ const formulario = document.getElementById("form-principal");
 const tabela = document.getElementById("table_body");
 let tarefas = [];
 let tarefaCorrente = null
+if (tarefas.length === 0) {
+    renderizaTabela()
+}
 
 // negação é somente o símbolo de exclamação(!)
 // diferente é somente símbolo de exclamação e igual juntos(!=)
@@ -27,6 +30,8 @@ function salvarTarefa(idx, titulo, descricao) {
 
 function adicionaTarefas(titulo, descricao) {
     tarefas = [...tarefas, {titulo: titulo, descricao: descricao}]
+    localStorage.setItem("tarefas", JSON.stringify(tarefas))
+
 }
 
 function criaLinha() {
@@ -56,8 +61,22 @@ function removerTarefa(idx) {
     renderizaTabela()
 }
 
+function recuperaDados() {
+    if (localStorage.getItem("tarefas").length) {
+        const tarefas = JSON.parse(localStorage.getItem("tarefas"))
+        tarefas.forEach((tarefa) => {
+            adicionaTarefas(tarefa.titulo, tarefa.descricao)
+        })
+    }
+}
+
 function renderizaTabela() {
     tabela.innerText = "";
+
+if (tarefas.length === 0) {
+    recuperaDados()
+}
+
     tarefas.forEach((tarefa, index) => {
         const linha = criaLinha()
         let colunaTitulo = criaColuna()
