@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de multas</title>
+</head>
+<body>
+    <h1>SISTEMA DE MULTAS</h1>
+    <p><strong>VELOCIDADE PERMITIDA: 60 KM/H</strong></p><br>
+    Velocidade do automóvel <input type="number" name="velocidade" id="velocidade" placeholder="Digite a velocidade"> Km/h
+    <button value="verificar" id="btn__verificar" onclick="calcular()">VERIFIQUE</button>
+    <div id="res"></div>
+
+    <style>
+        p {
+            margin-bottom: .5rem;
+            background-color: #e2c20c;
+            width: 17.5rem;
+            padding: .2rem;
+            border: solid .2rem #000000;
+        }
+        
+        #btn__verificar {
+            background-color: #e2c20c;
+            color: #000000;
+            font-weight: bold;
+            height: 2.2rem;
+            border: solid .2rem #000000;
+            padding: .5rem;
+        }
+
+        #velocidade {
+            width: 8rem;
+            height: 1.8rem;
+        }
+
+        #res {
+            margin-top: .5rem;
+        }
+    </style>
+</body>
+
+<script>
+    function calcular () {
+        let vel = document.getElementById('velocidade')
+        let res = document.getElementById('res')
+        let veloc = Number(vel.value)
+        res.innerHTML = `Você passou a <strong>${veloc} Km/h.</strong> Está dentro da velocidade permitida.`
+        if (veloc > 60) {
+            res.innerHTML = `Você passou a <strong>${veloc} Km/h.</strong> Está acima da velocidade permitida e por isso foi <strong>MULTADO</strong>.`
+        }
+    }
+</script>
+</html>
