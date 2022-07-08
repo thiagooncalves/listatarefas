@@ -1,0 +1,27 @@
+body {
+    background-color: #dddddd;
+    font-family: 'Quicksand';
+}
+
+#titulo__principal {
+    text-align: center;
+}
+
+#rodape {
+    text-align: center;
+    font-style: italic;
+}
+
+#div__principal {
+    background-color: #FFFFFF;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    border-radius: 1rem;
+    padding: .5rem;
+    box-shadow: .3rem .3rem .3rem #242222;
+}
+
+#imagem {
+    margin-top: 1rem;
+}
