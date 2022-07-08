@@ -32,6 +32,7 @@
             background-color: #e2c20c;
             color: #000000;
             font-weight: bold;
+            cursor: pointer;
         }
 
         #país {
@@ -43,7 +44,6 @@
     function verificar() {
         let country = document.getElementById('país')
         let res = document.getElementById('res')
-        let brasileiro = document.getElementById('brasileiro')
         let país = country.value
         res.innerHTML = `Você é do(a) <strong>${país}</strong>, portanto é <strong>BRASILEIRO!</strong>`
         if (país != 'brasil' && país != 'Brasil') {
