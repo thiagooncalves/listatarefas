@@ -1,8 +1,6 @@
 function parimpar(n) {
-    debugger
     if (typeof n != Number) return
     if (n%2 == 0) {
-
       return "Par!"
     } else {
       return "Ímpar!"

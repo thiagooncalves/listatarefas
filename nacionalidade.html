@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>NACIONALIDADE</h1>
+    <p>VOCÊ É DE QUAL PAÍS?</p>
+    Digite o seu país <input name="país" id="país" placeholder="Meu país">
+    <button value="verificar" id="btn__verificar" onclick="verificar()">VERIFIQUE</button>
+    <div id="res"></div>
+    <div id="brasileiro"></div>
+
+    <style>
+        #res {
+            margin-top: 1rem;
+        }
+
+        p {
+            background-color: #e2c20c;
+            padding: .5rem;
+            width: 11.5rem;
+            font-weight: bold;
+            border: solid .2rem #000000;
+        }
+
+        #btn__verificar {
+            height: 1.7rem;
+            background-color: #e2c20c;
+            color: #000000;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #país {
+            height: 1.3rem;
+        }
+    </style>
+</body>
+<script>
+    function verificar() {
+        let country = document.getElementById('país')
+        let res = document.getElementById('res')
+        let país = country.value
+        res.innerHTML = `Você é do(a) <strong>${país}</strong>, portanto é <strong>BRASILEIRO!</strong>`
+        if (país != 'brasil' && país != 'Brasil') {
+            res.innerHTML = 'Você <strong>NÃO</strong> é do Brasil, portanto é <strong>ESTRANGEIRO!</strong>'
+        }
+        }
+</script>
+</html>

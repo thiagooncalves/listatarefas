@@ -70,14 +70,21 @@ function recuperaDados() {
     }
 }
 
-function renderizaTabela() {
+function renderizaTabela(tabelaFiltrada = null) {
+
     tabela.innerText = "";
 
-if (tarefas.length === 0) {
-    recuperaDados()
-}
+    if (tarefas.length === 0) {
+        recuperaDados()
+    }
 
-    tarefas.forEach((tarefa, index) => {
+    if(tabelaFiltrada != null){
+        filtro = tabelaFiltrada;
+    }else{
+        filtro = tarefas;
+    }
+
+    filtro.forEach((tarefa, index) => {
         const linha = criaLinha()
         let colunaTitulo = criaColuna()
         let colunaDescricao = criaColuna()

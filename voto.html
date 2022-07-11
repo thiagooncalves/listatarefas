@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrigatoriedade de voto</title>
+</head>
+<body>
+    <h1>OBRIGATORIEDADE DE VOTO</h1>
+    <p>Quer saber se tem a obrigação de votar? Digite a sua idade abaixo.</p>
+    Digite a sua idade <input type="number" name="idade" id="idade" placeholder="Minha idade">
+    <button value="verificar" id="btn__verificar" onclick="verificar()">VERIFICAR</button>
+    <div id="res"></div>
+
+    <style>
+        #res {
+            margin-top: 1rem;
+        }
+
+        #btn__verificar {
+            background-color: #e2c20c;
+            color: #000000;
+            font-weight: bold;
+            height: 2.2rem;
+            border: solid .2rem #000000;
+            padding: .5rem;
+            cursor: pointer;
+        }
+
+        #idade {
+            height: 1.8rem;
+            margin-top: 1rem;
+        }
+
+        p {
+            margin-bottom: .5rem;
+            background-color: #e2c20c;
+            width: 27rem;
+            padding: .2rem;
+            border: solid .2rem #000000;
+        }
+    </style>
+</body>
+<script>
+    function verificar() {
+    let yearsold = Number(idade.value)
+    if (yearsold < 16) {
+        res.innerHTML = `Você tem <strong>${yearsold}</strong> anos, o seu voto é <strong>PROIBIDO!</strong>`
+    } else if (yearsold < 18 || yearsold > 65) {
+        res.innerHTML = `Você tem <strong>${yearsold}</strong> anos, o seu voto é <strong>FACULTATIVO!</strong>`
+    } else {
+        res.innerHTML = `Você tem <strong>${yearsold}</strong> anos, o seu voto é <strong>OBRIGATÓRIO!</strong>`
+    }
+}
+</script>
+</html>
