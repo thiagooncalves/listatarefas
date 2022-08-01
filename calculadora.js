@@ -7,7 +7,7 @@ function clean() {
 	document.getElementById('screen').innerHTML = '';
 }
 
-function back() {
+function backspace() {
 	let screen = document.getElementById('screen').innerHTML;
 	document.getElementById('screen').innerHTML = screen.substring(0, screen.length -1);
 }
@@ -17,6 +17,6 @@ function calcular() {
 	if(screen) {
 		document.getElementById('screen').innerHTML = eval(screen);
 	} else {
-	document.getElementById('screen').innerHTML = 'empty'
+	document.getElementById('screen').innerHTML = ''
 	}
 }
