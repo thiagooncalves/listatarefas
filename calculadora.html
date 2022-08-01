@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="calculadora.css">
+    <link href="https://fonts.googleapis.com/css?family=Exo:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <h1>CALCULADORA</h1>
+    </header>
+
+    <main>
+        <div id="container__principal">
+            <p id="screen"></p>
+            <ul id="key">
+                <li onclick="insert('7')">7</li>
+                <li onclick="insert('8')">8</li>
+                <li onclick="insert('9')">9</li>
+                <li onclick="back()">←</li>
+                <li onclick="clean('C')">C</li>
+                    
+                <li onclick="insert('4')">4</li>
+                <li onclick="insert('5')">5</li>
+                <li onclick="insert('6')">6</li>
+                <li onclick="insert('*')">x</li>
+                <li onclick="insert('/')">/</li>
+
+                <li onclick="insert('1')">1</li>
+                <li onclick="insert('2')">2</li>
+                <li onclick="insert('3')">3</li>
+                <li onclick="insert('-')">-</li>
+                <li onclick="insert('+')">+</li>
+                
+                    
+                <li onclick="insert('/100')">%</li>
+                <li onclick="insert('0')">0</li>
+                <li onclick="insert('.')">.</li>
+                <li id="botao__igual" onclick="calcular()">=</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer></footer>
+</body>
+<script src="calculadora.js"></script>
+</html>

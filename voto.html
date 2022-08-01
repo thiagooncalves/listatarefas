@@ -47,11 +47,12 @@
     let yearsold = Number(idade.value)
     if (yearsold < 16) {
         res.innerHTML = `Você tem <strong>${yearsold}</strong> anos, o seu voto é <strong>PROIBIDO!</strong>`
-    } else if (yearsold < 18 || yearsold > 65) {
+        return
+    } if (yearsold < 18 || yearsold > 65) {
         res.innerHTML = `Você tem <strong>${yearsold}</strong> anos, o seu voto é <strong>FACULTATIVO!</strong>`
-    } else {
+        return
+    } 
         res.innerHTML = `Você tem <strong>${yearsold}</strong> anos, o seu voto é <strong>OBRIGATÓRIO!</strong>`
-    }
 }
 </script>
 </html>
