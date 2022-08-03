@@ -22,7 +22,7 @@ h1 {
     border: solid .5rem #c5940c;
 }
 
-#key {
+#botoes {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
